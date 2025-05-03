@@ -1,0 +1,673 @@
+<!DOCTYPE html> <!-- Tells the browser this is an HTML5 document -->
+<html lang="en"> <!-- Sets language of the document to English -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nityant Singhal | My Journey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+  
+  
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0f0f0f;
+      margin: 0;
+    }
+
+    nav {
+      background: linear-gradient(to right, #39FF14, #00FFFF);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+	
+	
+	
+	
+	html {
+  scroll-behavior: smooth;
+}
+
+	  nav ul {
+    list-style: none; /* removes bullet points */
+    display: flex; /* makes list horizontal */
+    justify-content: center; /* centers nav items */
+    padding: 1rem; /* adds space inside the navbar */
+    margin: 0;
+  }
+
+  nav ul li {
+    margin: 0 20px; /* space between nav items */
+  }
+
+  nav a {
+    color: white; /* makes links white */
+    text-decoration: none; /* removes underline */
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease; /* smooth animation on hover */
+  }
+
+  nav a:hover {
+    color: #ff00ff; /* hot pink on hover */
+    text-shadow: 0 0 10px #ff00ff; /* glowing effect */
+  }
+
+	  .hero {
+    background: linear-gradient(to right, #00f7ff, #8f00ff); /* vibrant blue to purple */
+    color: white;
+    height: 100vh; /* full screen height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p 
+  {font-size: 1.5rem;
+    color: #ffe600; /* bright yellow tagline */
+    text-shadow: 0 0 10px #ffe600;}
+
+  .hero-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* makes it a circle */
+    object-fit: cover;
+    border: 4px solid #ffe600;
+    box-shadow: 0 0 20px #ffe600;
+    margin-bottom: 20px;
+  }
+  .about {
+    background-color: #1e1e2f; /* Dark bluish-purple */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+  }
+
+  .about p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+  }
+
+
+  .journey {
+    background-color: #121212; /* Dark sporty background */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .journey h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #39FF14;
+    text-shadow: 0 0 10px #39FF14;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .timeline-item {
+    background-color: #1f1f1f;
+    border-left: 6px solid #00FFFF;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 0 10px #00FFFF;
+  }
+
+  .timeline-item h3 {
+    color: #00FFFF;
+    margin-bottom: 10px;
+  }
+
+  .timeline-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+
+
+  .stats {
+    background-color: #000; /* Solid black background */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .stats h2 {
+    font-size: 2.5rem;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    margin-bottom: 40px;
+  }
+
+  .stat-table {
+    margin: 30px auto;
+    max-width: 900px;
+  }
+
+  .stat-table h3 {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+    margin-bottom: 10px;
+  }
+
+  .stat-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #111;
+    box-shadow: 0 0 15px #00ffff;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .stat-table th, .stat-table td {
+    padding: 12px 15px;
+    border: 1px solid #00ffff;
+    font-size: 1rem;
+  }
+
+  .stat-table th {
+    background-color: #00ffff;
+    color: #000;
+  }
+
+  .stat-table tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+
+
+
+
+
+.carousel-section {
+  background: linear-gradient(to right, #000000, #0a0a0a);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.carousel-section h2 {
+  font-size: 2.5rem;
+  color: #00ffee;
+  text-shadow: 0 0 10px #00ffee;
+  margin-bottom: 40px;
+}
+
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #39ff14;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #39FF14;
+  color: #000;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px 15px;
+  z-index: 2;
+  box-shadow: 0 0 10px #39FF14;
+}
+
+.carousel button:hover {
+  background-color: #00ffee;
+  box-shadow: 0 0 20px #00ffee;
+}
+
+.carousel .prev {
+  left: -50px;
+}
+
+.carousel .next {
+  right: -50px;
+}
+
+
+
+.caption {
+  color: #00ffee;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  text-shadow: 0 0 10px #00ffee;
+}
+
+.dots {
+  margin-top: 15px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #444;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #39FF14;
+  box-shadow: 0 0 10px #39FF14;
+}
+
+.footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 1rem;
+  margin-top: 50px;
+  box-shadow: 0 -2px 10px #00ffee;
+}
+
+.footer a {
+  color: #00ffee;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+
+.goals {
+  background: linear-gradient(to right, #1f1f1f, #121212);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.goals h2 {
+  font-size: 2.5rem;
+  color: #39FF14;
+  text-shadow: 0 0 10px #39FF14;
+  margin-bottom: 30px;
+}
+
+.goal-box {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  background: #181818;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.family {
+  background: radial-gradient(circle at center, #101010, #1c1c1c);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.family h2 {
+  font-size: 2.5rem;
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+  margin-bottom: 30px;
+}
+
+.family-box {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  background: #161616;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #ff00ff;
+}
+
+
+.instagram {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.instagram h2 {
+  font-size: 2.5rem;
+  color: #ff007f;
+  text-shadow: 0 0 10px #ff007f;
+  margin-bottom: 15px;
+}
+
+.instagram p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.insta-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(to right, #ff007f, #ff00ff);
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 0 15px #ff00ff;
+  transition: transform 0.3s;
+}
+
+.insta-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ff00ff;
+}
+.insta-btn i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+  <nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#stats">Stats</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#goals">Goals</a></li>
+    <li><a href="#family">Family</a></li>
+    <li><a href="#instagram">Instagram</a></li>
+  </ul>
+</nav>
+
+  
+   <section id="home" class="hero">
+  <img src="nityant-hero.jpg" alt="Nityant Singhal" class="hero-img">
+  <h1>Nityant Singhal</h1>
+  <p>Strong mind, stronger will. The journey has just begun.</p>
+	</section>
+	
+	<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>Hi, I'm Nityant Singhal, born on 20th January 2009 and raised in Pune. I’ve lived here all my life and I have a twin brother, Hemang. I’m an athlete at heart and currently preparing for IIT-JEE while building my skills in coding and entrepreneurship.</p>
+</section>
+
+
+<section id="journey" class="journey">
+  <h2>My Sports Journey</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Skating</h3>
+      <p>Started at age 3. My very first sport that built my balance and agility.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Football</h3>
+      <p>Joined in early school years. Loved the energy and teamwork it brought.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Basketball</h3>
+      <p>Fast-paced and thrilling, basketball helped improve my reflexes.</p>
+    </div>
+
+   <div class="timeline-item">
+  <h3>Cricket</h3>
+  <p>Played for 7–8 years and earned multiple accolades. Scored two centuries (177 & 165). Cricket taught me how to work hard, stay devoted, and push myself beyond limits.</p>
+</div>
+
+<div class="timeline-item">
+  <h3>Swimming</h3>
+  <p>First attempted at age 4 but couldn't learn due to fear of water depth. After leaving cricket, I mastered swimming over 4–5 months. Now I flex it on vacations and enjoy it regularly.</p>
+</div>
+
+<div class="timeline-item">
+  <h3>Martial Arts & Fitness</h3>
+  <p>In the last two years, I’ve picked up self-defense skills and basic martial arts. I currently run every morning at 7 AM and swim in the evening to stay physically and mentally sharp.</p>
+</div>
+
+  </div>
+</section>
+
+
+
+
+<section id="stats" class="stats">
+  <h2>Cricket Stats</h2>
+
+  <div class="stat-table">
+    <h3>Batting Stats</h3>
+    <table>
+      <tr>
+        <th>Matches</th><th>Innings</th><th>Runs</th><th>Not Outs</th><th>30s</th><th>50s</th><th>100s</th><th>HS 1</th><th>HS 2</th><th>4s</th><th>6s</th><th>Avg</th>
+      </tr>
+      <tr>
+        <td>111</td><td>109</td><td>3273</td><td>23</td><td>21</td><td>18</td><td>2</td><td>177</td><td>166</td><td>449</td><td>6</td><td>38.06</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="stat-table">
+    <h3>Bowling Stats</h3>
+    <table>
+      <tr>
+        <th>Matches</th><th>Innings</th><th>Overs</th><th>Maidens</th><th>Wickets</th><th>Best Bowling</th><th>Economy</th><th>SR</th><th>Dot Balls</th>
+      </tr>
+      <tr>
+        <td>111</td><td>92</td><td>453.5</td><td>52</td><td>101</td><td>5/35</td><td>4.47</td><td>26.17</td><td>1772</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+
+
+<section id="gallery" class="carousel-section">
+  <h2>Gallery</h2>
+  <div class="carousel">
+    <button class="prev">&#10094;</button>
+    <img src="1.jpg" class="carousel-image" alt="Pic 1">
+	<p class="caption"></p>
+<div class="dots"></div>
+
+    <button class="next">&#10095;</button>
+  </div>
+</section>
+
+
+
+
+
+
+
+<script>
+  const images = [
+    { src: "1.jpg", caption: "Cool Mirror Click" },
+    { src: "2.jpg", caption: "Trophy Moment" },
+    { src: "nityant first mom.png", caption: "My First Man of the Match" },
+    { src: "3.jpg", caption: "Selfie With Shades" },
+    { src: "4.jpg", caption: "Abs Pic" },
+    { src: "8.png", caption: "Team Photo" }
+  ];
+
+  let currentIndex = 0;
+  let intervalId;
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const imageElement = document.querySelector('.carousel-image');
+    const captionElement = document.querySelector('.caption');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const dotsContainer = document.querySelector('.dots');
+
+    // Create dots
+    images.forEach((_, index) => {
+      const dot = document.createElement('span');
+      dot.classList.add('dot');
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        showImage(currentIndex);
+        resetAutoplay();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function showImage(index) {
+      imageElement.src = images[index].src;
+      captionElement.textContent = images[index].caption;
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+      resetAutoplay();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+      resetAutoplay();
+    });
+
+    function startAutoplay() {
+      intervalId = setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      }, 5000); // 5 seconds
+    }
+
+    function resetAutoplay() {
+      clearInterval(intervalId);
+      startAutoplay();
+    }
+
+    showImage(currentIndex);
+    startAutoplay();
+  });
+</script>
+
+
+<section id="goals" class="goals">
+  <h2>Goals & Dreams</h2>
+  <div class="goal-box">
+    <p>I dream of becoming an entrepreneur who builds impactful products and businesses.</p>
+    <p>My short-term goal is to clear IIT-JEE and study at <strong>IIT Bombay</strong>.</p>
+    <p>Post-engineering, I aim to pursue an <strong>MBA from a good IIM</strong> and earn a <strong>CFA</strong> for financial expertise.</p>
+    <p>Alongside academics, I work on coding, reading, and self-growth daily — one step at a time.</p>
+  </div>
+</section>
+
+<section id="family" class="family">
+  <h2>Family & Support</h2>
+  <div class="family-box">
+    <p>My parents have always stood behind me — not just with words, but with actions.</p>
+    <p>They set up practice nets at home, got me a bowling machine, arranged personal fitness training coach, and supported every dream I've had.</p>
+    <p>They never let outside pressure affect how they raised me and my twin brother <strong>Hemang</strong>. We've been teammates in life — in sports, studies, and now dreams.</p>
+    <p>Whatever I am today, and whatever I’ll become, is deeply rooted in their belief in me.</p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section id="instagram" class="instagram">
+  <h2>Follow Me on Instagram</h2>
+  <p>Get a closer look into my journey, moments, and milestones.</p>
+<a href="https://www.instagram.com/singhalnityant18/" target="_blank" class="insta-btn">
+  <i class="fab fa-instagram"></i> @singhalnityant18
+</a>
+
+</section>
+
+
+
+<footer class="footer">
+  <p>Made with 💪 by Nityant Singhal</p>
+  <p>&copy; 2025 | <a href="https://www.instagram.com/singhalnityant18/" target="_blank" class="insta-btn">
+  <i class="fab fa-instagram"></i> @singhalnityant18
+</a>
+</p>
+</footer>
+
+
+</body>
+</html>
