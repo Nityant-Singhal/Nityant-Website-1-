@@ -1,0 +1,13 @@
+{
+  "image_interval_seconds": 100,
+  "countdown_target": "2027-01-21T00:00:00+05:30",
+  "default_theme": "dark",
+  "auto_backup_on_save": true,
+  "max_image_dimension": 1920,
+  "image_quality": 85,
+  "end_of_day_trigger_minutes_before_sleep": 30,
+  "save_at_midnight_ist": true,
+  "default_sleep_time": "11:00 PM",
+  "image_folder_size_limit_mb": 2048,
+  "resume_policy_on_crash": "ask"
+}

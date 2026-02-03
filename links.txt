@@ -1,0 +1,12 @@
+ChatGPT|https://chat.openai.com
+Gemini|https://gemini.google.com
+Perplexity|https://www.perplexity.ai
+Spotify|https://open.spotify.com
+Invert PDF|https://online2pdf.com/invert-colors-in-pdf
+Merge PDF|https://www.ilovepdf.com/merge_pdf
+Notes Crafter|https://www.notescrafter.com
+PW|https://www.pw.live/study-v2/study
+Google Docs|https://docs.google.com/document/u/0/
+Google Sheets 1|https://docs.google.com/spreadsheets/d/1bLzUT1u77BuT3KAflWDCbeehetUmigGhGB2O1N3WjYc/edit
+Google Sheets 2|https://docs.google.com/spreadsheets/d/1HqSuDjOD_NcyHGV82kVYayz2t37CTtGkBHjkq7ab2-o/edit
+YouTube PW|https://www.youtube.com/@PW-JEEWallah
